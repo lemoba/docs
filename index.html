@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CY-Notes</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  <!-- alert -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
+  <!-- latex -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <!--网页标题左侧显示-->
+  <link rel="icon" href="https://gitee.com/veal98/images/raw/master/img/20200518211442.png" type="image/x-icon">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--收藏夹显示图标-->
+  <link rel="shortcut icon" href="https://gitee.com/veal98/images/raw/master/img/20200518211442.png" type="image/x-icon">
+  <style>
+    .app-nav {
+      position: fixed !important;
+      margin: 25px 60px 0 0;
+      margin-right: 60px;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      z-index: 10;
+    }
+    .to-top {
+      cursor: pointer;
+      position: fixed;
+      right: 15px;
+      bottom: 30px;
+      display: block;
+      padding: 10px 20px;
+      margin-right: 10px;
+      color: #fff;
+      border-radius: 10px;
+      background-color: rgb(66,185,131);
+    }
+  </style>                    
+</head>
+<body>
+  <nav class="app-nav">
+    <ul>
+      <li>
+        <i class="fa fa-home fa-1x"></i>
+        <a href="http://localhost:3000/#/README" target="_l="noopener" title="主页"> 主页
+        </a>
+      </li>
+      <li>
+        <i class="fa fa-th-large fa-1x"></i>
+        <a href="https://veal98.gitee.io/cs-wiki/#/README" target="_l="noopener" title="分类"> 分类
+        </a>
+        <ul>
+          <li>
+            <a href="#/zh-cn/algorithem" title="✏️ 算法">✏️ 算法</a>
+          </li>
+          <li>
+            <a href="#/README?id=%f0%9f%93%91-%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80" title="📑 计算机基础">📑 计算机基础</a>
+          </li>
+         
+      </li>
+  </nav>
+  <div id="app">加载中</div>
+  <a class="to-top">
+    TOP
+  </a>
+  <script>
+    window.$docsify = {
+      name: 'WiKi-Notes',
+      repo: 'https://github.com/Hanxueqing/Douban-Movie.git',
+      subMaxLevel: 4,
+      maxLevel: 4,
+      autoHeader: true,
+      mergeNavbar: true,
+      coverpage: true,
+     // loadSidebar: true,
+      onlyCover: false,
+      //loadNavbar: true,
+      //themeColor: 'rgb(102, 126, 233)',
+      auto2top:true,
+      coverpage: true,
+      onlyCover: true,
+      topMargin: 140,
+     
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😒 找不到结果',
+        // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },//增加搜索框
+
+      copyCode: {
+          buttonText: 'Copy',
+          errorText: 'Error',
+          successText: 'OK!'
+      },
+
+      'flexible-alerts': {
+        style: 'flat'
+      }
+  }
+  </script>
+  <!-- Docsify v4 -->
+  <!-- <script src="//unpkg.com/docsify"></script> -->
+  <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <script>
+    document.body.oncopy = function () { 
+      swal("复制成功 🎉", '' ,
+        "success"); };
+  </script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+
+<script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
+
+<!-- 语法高亮 -->
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-cpp.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+
+<!-- 置顶插件 -->
+<script src="style/jquery-1.11.3.min.js"></script>
+<script src="style/jquery.toTop.min.js"></script>
+<script>
+  $('.to-top').toTop();
+</script>
+
+</body>
+</html>
